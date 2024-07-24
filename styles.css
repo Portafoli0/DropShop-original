@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Poppins 800';
+    src: url(styles/Fonts/Poppins-ExtraBold.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins 400 (Regular)';
+    src: url(styles/Fonts/Poppins-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins 600';
+    src: url(styles/Fonts/Poppins-SemiBold.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins 700';
+    src: url(styles/Fonts/Poppins-Bold.ttf);
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+header {
+    font-family: 'Poppins 800', sans-serif;
+    background-color: #2472CD;
+    color: white;
+    text-align: center;
+    font-size: clamp(18px, 4vw, 20px);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Poppins 400 (Regular)';
+}
+
+nav img {
+    cursor: pointer;
+}
+
+nav #Menu-Button {
+    display: none;
+}
+
+nav .Menu-Options {
+    padding: 0;
+}
+
+nav .Menu-Options li {
+    display: inline;
+    margin: 18px 5px 18px 5px;
+
+}
+
+nav .Menu-Options a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+nav .Menu-Options-Icons {
+    display: none;
+}
+
+nav .Container-Icons-Search-Buy #Lupa-Icon-For-Mobile {
+    display: none;
+}
+
+nav .Container-Icons-Search-Buy .Container-Search .Close-Icon {
+    display: none;
+}
+
+nav .Container-Icons-Search-Buy .Container-Search #Search {
+    padding: 5px 0px 5px 11px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+nav .Container-Icons-Search-Buy .Container-Search #Button-Search {
+    background-color: #004DFF;
+    border: 0;
+    color: white;
+    font-weight: 800;
+    font-size: 16px;
+    height: 30px;
+    border-radius: 0 0 10px 0;
+}
+
+nav .Container-Icons-Search-Buy .Numero-De-Productos-Almacenados {
+    position: relative;
+    top: -12px;
+}
+
+main .Nicho .Titulo {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+main .Nicho .Contenedor-De-Productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+main .Nicho .Contenedor-De-Productos .Productos {
+    width: 265px;
+    height: auto;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
+    border-radius: 10px;
+}
+
+main .Nicho .Contenedor-De-Productos .Productos img{
+    width: 270px;
+    height: 270px;
+    cursor: pointer;
+}
+
+main .Nicho .Contenedor-De-Productos .Productos div #Precio-Real-O-Descuento {
+    font-family: 'Poppins 600', sans-serif;
+}
+
+main .Nicho .Contenedor-De-Productos .Productos div #Precio-Real {
+    text-decoration: line-through;
+    color: #616161;
+}
+
+main .Nicho .Contenedor-De-Productos .Productos div .Agregar-Al-Carrito-De-Compras {
+    background-color: #1D71E6; /* #0564E6*/
+    color: white;
+    border: 0px;
+    border-radius: 6px;
+    font-size: 15px;
+    height: 24px;
+    cursor: pointer;
+}
+
+main .Container-Carrito-De-Compra {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: white;
+    width: 400px;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    transition: right 1s ease;
+}
+
+main .Container-Carrito-De-Compra .Contenedor {
+    height: 90%;
+    overflow-y: scroll;
+}
+
+main .Container-Carrito-De-Compra .Contenedor .Contenedor-Icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Poppins 700';
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+main .Container-Carrito-De-Compra .Contenedor .Contenedor-Icons a {
+    display: flex;
+}
+
+main .Container-Carrito-De-Compra .Finalizar_pedido {
+    text-align: center;
+}
+
+main .Container-Carrito-De-Compra .Finalizar_pedido button {
+    background-color: #1D71E6;
+    font-size: 17px;
+    border: 0;
+    padding: 10px;
+    width: 290px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+main .Container-Carrito-De-Compra .Contenedor .Contenedor-De-Productos-En-El-Carro-De-Compra {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+main .Container-Carrito-De-Compra .Contenedor .Contenedor-De-Productos-En-El-Carro-De-Compra:nth-of-type(1) {
+    margin-top: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+main .Container-Carrito-De-Compra .Contenedor .Contenedor-De-Productos-En-El-Carro-De-Compra ul li:nth-of-type(1) {
+    font-family: 'Poppins 400 (Regular)';
+}
+
+main .Container-Carrito-De-Compra .Contenedor .Contenedor-De-Productos-En-El-Carro-De-Compra ul li:nth-of-type(2) {
+    font-family: 'Poppins 600';
+}
+
+
+@media (max-width: 1099px) {
+    nav .Container-Icons-Search-Buy #Lupa-Icon-For-Mobile {
+        display: inline;
+    }
+
+    nav .Container-Icons-Search-Buy .Container-Search {
+        width: 100%;
+        height: 70px;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e8e8e8;
+        transition: top 1s ease;
+    }
+
+    nav .Container-Icons-Search-Buy .Container-Search .Close-Icon {
+        display: inline;
+    }
+}
+
+@media (max-width: 899px) {
+    nav #Menu-Button {
+        display: inline;
+    }
+    
+    nav .Menu-Options {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 252px;
+        background-color: rgb(204, 204, 204);
+        padding-left: 10px;
+        transition: left 1s ease;
+    }
+
+    nav .Menu-Options li:nth-of-type(1) {
+        padding-left: 0;
+    }
+    
+    nav .Menu-Options li {
+        display: block;
+        padding-left: 10px;
+    }
+
+    nav .Menu-Options-Icons {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 630px) {
+    main .Nicho .Contenedor-De-Productos {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 399px) {
+    main .Container-Carrito-De-Compra {
+        width: 320px;
+    }
+}
