@@ -56,7 +56,9 @@ const params = new URLSearchParams(window.location.search);
         var rutaImagen = decodeURIComponent(params.get('ruta'));
         var Nombre_del_producto = decodeURIComponent(params.get('nombre'));
         var Precio_Real = decodeURIComponent(params.get('Precio_Real'));
-        var Precio_Real_O_Descuento = decodeURIComponent(params.get('Precio_Real_O_Descuento'))
+        var Precio_Real_O_Descuento = decodeURIComponent(params.get('Precio_Real_O_Descuento'));
+
+        document.title = Nombre_del_producto;
 
         var article = document.querySelector('main section .Contenedor article');
 
@@ -92,14 +94,14 @@ const params = new URLSearchParams(window.location.search);
 
                     <li style="margin-bottom: 20px;">
                             <div style="display: flex; justify-content: space-evenly;">
-                                <button>
-                                    <img src="Icons/mas.png" style="width: 20px; height: 20px;">
+                                <button aria-label="Aumentar una unidad">
+                                    <img src="Icons/mas.png" style="width: 20px; height: 20px;" alt="Aumentar una unidad">
                                 </button>                                        
                                         
                                 <p>1</p>
                                     
-                                <button>
-                                    <img src="Icons/menos.png" style="width: 20px; height: 20px;">
+                                <button aria-label="Disminuir una unidad">
+                                    <img src="Icons/menos.png" style="width: 20px; height: 20px;" alt="Disminuir una unidad">
                                 </button>
                             </div>
                     </li>
@@ -112,7 +114,7 @@ const params = new URLSearchParams(window.location.search);
 
                                 <button style="text-align: left; padding-left: 10px; margin-left: 10px;" class="Agregar-Al-Carrito-De-Compras">
                                     <p>Agregar al</p>
-                                    <img src="Icons/anadir-al-carrito.png" style="width: 18px; height: auto; position: relative; top: -18px; left: 75px;">                                    
+                                    <img src="Icons/anadir-al-carrito.png" style="width: 18px; height: auto; position: relative; top: -18px; left: 75px;" alt="Icono de añadir al carrito de compra">                                    
                                 </button>
                             </div>
                     </li>
@@ -139,7 +141,7 @@ function actualizarCantidadTotal() {
 
     var almacenJSON = localStorage.getItem('almacen');
     var Almacen = JSON.parse(almacenJSON);
-    
+
     var CantidadTotal = Almacen.reduce(function(acumulador, objeto) {
     // Sumamos directamente objeto.Cantidad al acumulador
     return acumulador + objeto.Cantidad;
